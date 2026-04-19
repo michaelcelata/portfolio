@@ -8,18 +8,25 @@ body {
 	src: url("res/Auroxa.ttf");
 }
 
+.picture {
+  display: block;
+	max-width: 800px;
+	margin: auto;
+	text-align: center;
+}
+
 @font-face {
 	font-family: "itc";
 	src: url("res/itc.ttf");
 }
 
 .imgb {
+	height: 9000px;
 	z-index: -50;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-size: cover;
 }
 
 .content {
@@ -111,4 +118,9 @@ body {
 	font-family: Auroxa;
 	font-size: 30px;
 	text-shadow: 4px 4px 8px #000000;
+}
+
+.proudpbody {
+	background-size: cover;
+	background-image: url("res/bk_pp.png");
 }

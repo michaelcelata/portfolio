@@ -69,45 +69,60 @@ body {
 }
 
 .textblock {
+	border-radius: 8px;
+	box-shadow: 0 0 0 1px #FFFFFFC0, 0 0 0 3px #000000, 2px 2px 8px #000000;
 	margin: auto;
 	width: fit-content;
-	border-radius: 60px;
+	background-color: #00008080;
 	text-align: center;
+	padding: 20px;
+	margin-top: 50px; margin-bottom: 50px;
+}
+
+.textblockclear {
 	position: relative;
+	margin: auto;
+	width: fit-content;
+	padding: 20px;
+	text-align: center;
 	margin-top: 20px; margin-bottom: 20px;
 }
 
-.textblock::before {
+.textblockclear::before {
   content:"";
   position:absolute;
   left:0;
   top:0;
   width:100%;
   height:100%;
-	filter: blur(40px);
-	background: linear-gradient(90deg, #00000000, #3092eec0, #00000000);
+	filter: blur(20px);
+	background-color: #FFFFFF80;
   background-size:cover;
   z-index:-1;
 }
 
-.textblockclear {
-	margin: auto;
-	width: fit-content;
-	text-align: center;
-	margin-top: 40px; margin-bottom: 40px;
-}
-
 .paragraph {
+	text-shadow: 0 0 16px #FFFFFF;
 	text-align: left;
 	margin: 0;
 	font-size: 25px;
-	color:white;
+	color:black;
 	font-family: itc;
 	max-width: 950px;
+}
+
+.tbpara {
+	text-align: center;
+	margin: 0;
+	font-size: 25px;
+	color:white;
 	text-shadow: 2px 2px 4px #000000;
+	font-family: itc;
+	max-width: 950px;
 }
 
 .embeded {
+	background-color: #ffffff;
 	border: solid 2px #000000;
 	box-shadow: 0 0 8px 2px #FFFFFF;
 	margin: auto;
@@ -159,6 +174,6 @@ body {
 }
 
 .proudpbody {
-	background-size: cover;
-	background-image: url("res/bk_pp.png");
+	background-size:contain;
+	background-image: url("res/back2.png");
 }

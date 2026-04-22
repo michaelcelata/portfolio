@@ -21,7 +21,7 @@
 			<img src="res/proud.png" class="picture">
 
 			<div class="textblock">
-				<p class="paragraph">
+				<p class="tbpara">
 					The goal of this project was to make 30 signs representing the trees of Essex North Shore’s Arboriculture Maplewood Arboretum. Each sign contains the name of the tree in English, and an additional subtext that contains the name in Latin. Underneath, there is a machined QR code that links to a google document containing more information for the tree. Additionally, it contains a logo and the text “Maplewood Arboretum”.
 				</p>
 			</div>
@@ -44,7 +44,7 @@
 			</div>
 
 			<div class="textblock">
-				<p class="paragraph">
+				<p class="tbpara">
 					These signs were a collaboration between us, Metal Fabrication, and partially Carpentry for Arboriculture.
 				</p>
 			</div>
@@ -68,13 +68,15 @@
 
 			<p class="titletext">How it was done</p>
 
-			<div class="textblock">
+			<div class="textblockclear">
 				<p class="paragraph p2">
 					QR Codes are very complex from a topological and graphical complexity perspective.<br>As the white and black spots form contrast, machining a tool path with an End Mill or other tool will be difficult due the small size needed to achieve such resolution with traditional machining operations such as a pocket or profile.<br>As a result, software such as Fusion360 will be very suboptimal at automating the toolpath generation of 30 different QR codes.<br>Fusion360 works with different size tools, and can’t break free from the more common workflow of machine operations.<br>As a result, I took my previous skills I had as a hobby software developer (C++), and wrote a program that takes all 30 QR codes, and uses a QR code generation library that generates the code.<br>I used this program to then generate the G-code (toolpath) for each of the QR codes in an automated way.<br>Creating the QR codes from a website, converting all 30 of them into vector-based files, and importing all of them individually into Fusion360 by importing the image into the sketch is very time consuming and disgusting to think about. My program optimizes this by parsing a text file containing all of the tree names and links, and generates the QR code at the same time it generates the G-code.<br>Since engraving tools and spot drills can have varying visible diameter due to their nature of having a depth that can be changed, they make for a great option as a tool for engraving QR codes.<br>Small end mills can be expensive, but the engraving tool does not need to be small due to its ability to only have a tiny radial portion of the tool engraved into the material.<br>My program has a “for” loop, which loops through each of the spots, or modules, on a QR code on the X and Y axis, and does simple arithmetic to calculate the corresponding X and Y positional coordinates for the machine.<br>It accumulates a string based on these positional values with corresponding G-code syntax prefixed to their operations. The depth can be calculated by dividing the optimal diameter by 2, because the X is proportional to the Y with a 45 degree tool (as tan(45 deg) = 1).<br>The division by 2 occurs because the diameter is double the radius. This program was also optimized to save on cycle time by keeping the rapid distance to a minimum.
 				</p>
 			</div>
 
 			
+			<p class="titletext">The code</p>
+			<embed width="800" height="600" class="embeded" src="res/main.cpp"></embed> <br><br><br><br><br>
 			<p class="titletext">The final result</p>
 			<img src="res/final1.png" class="picture">
 

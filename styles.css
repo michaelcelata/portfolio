@@ -173,7 +173,53 @@ body {
 	text-shadow: 4px 4px 8px #000000;
 }
 
+.buttonb {
+	text-decoration: none;
+	transition: 200ms;
+	margin: 10px;
+	float:left;
+	background-color: #80C0FF80;
+	font-family: Auroxa;
+	font-size: 50px;
+	color:white;
+	text-shadow: 2px 2px 4px #000000;
+	padding: 14px;
+	border-radius: 14px;
+	border: solid 2px #FFFFFF80;
+	box-shadow: 0 0 2px 4px #000000, 2px 2px 4px #000000;
+	text-align: center;
+}
+
+.buttonb:hover {
+	transition: 200ms;
+	padding: 17px;
+	margin-top:7px;
+	margin-bottom: 7px;
+	background-color: #f8950080;
+}
+
+.morecontainer {
+	display: grid;
+	width: 600px;
+	margin:auto;
+}
+
 .proudpbody {
 	background-size:contain;
 	background-image: url("res/back2.png");
+}
+
+.refbody {
+	background-size: contain;
+	background-image: url("res/gradient.png");
+}
+
+.certbk {
+	background-size: contain;
+	background-image: url("res/corp.png");
+}
+
+.morebk {
+	background-size: cover;
+	background-image: url("res/bk44.png");
 }
